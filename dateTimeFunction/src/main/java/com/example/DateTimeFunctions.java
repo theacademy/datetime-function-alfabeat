@@ -1,6 +1,8 @@
 package com.example;
 
 import java.time.*;
+import java.util.Locale;
+
 
 public class DateTimeFunctions {
 
@@ -22,7 +24,8 @@ public class DateTimeFunctions {
 	 */
 	public static LocalDate getTodaysDate() {
 		//YOUR CODE STARTS HERE
-		return null;
+   		LocalDate now = LocalDate.now();
+		return now;
 		//YOUR CODE ENDS HERE
 
 	}
@@ -33,7 +36,7 @@ public class DateTimeFunctions {
 	 */
 	public static LocalDate getLaterDatebyDays(LocalDate date, int x) {
 		//YOUR CODE STARTS HERE
-		return null;
+		return  date.minusDays(x);
 		//YOUR CODE ENDS HERE
 
 	}
@@ -44,7 +47,7 @@ public class DateTimeFunctions {
 	 */
 	public static LocalDate getPreviousDatebyWeeks(LocalDate date, int x) {
 		//YOUR CODE STARTS HERE
-		return null;
+		return  date.minusWeeks(x);
 		//YOUR CODE ENDS HERE
 
 	}
@@ -56,7 +59,14 @@ public class DateTimeFunctions {
 	 */
 	public static String getTimeDifference(LocalDate date1, LocalDate date2) {
 		//YOUR CODE STARTS HERE
-		return null;
+		String output ="";
+
+		output += "Years-"+date1.until(date2).getYears()+":";
+		output += "Months-"+date1.until(date2).getMonths()+":";
+		output += "Days-"+date1.until(date2).getDays();
+
+
+		return (output);
 		//YOUR CODE ENDS HERE
 
 	}
