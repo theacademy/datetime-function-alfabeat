@@ -4,6 +4,7 @@ import java.time.*;
 import java.util.Locale;
 
 
+
 public class DateTimeFunctions {
 
 	/*
@@ -24,8 +25,8 @@ public class DateTimeFunctions {
 	 */
 	public static LocalDate getTodaysDate() {
 		//YOUR CODE STARTS HERE
-   		LocalDate now = LocalDate.now();
-		return now;
+
+		return LocalDate.now();
 		//YOUR CODE ENDS HERE
 
 	}
@@ -36,7 +37,7 @@ public class DateTimeFunctions {
 	 */
 	public static LocalDate getLaterDatebyDays(LocalDate date, int x) {
 		//YOUR CODE STARTS HERE
-		return  date.minusDays(x);
+		return  date.plusDays(x);
 		//YOUR CODE ENDS HERE
 
 	}
